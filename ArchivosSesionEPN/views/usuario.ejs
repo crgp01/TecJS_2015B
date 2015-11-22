@@ -1,0 +1,9 @@
+<h1 class="centro">Su Usuario es: <%- req.session.user.usuario %>  </h1>
+<div>
+    <h3 class="centro">Subir foto</h2>
+    <img class="center-block"src="images/<%- req.session.user.url %>" width="20%" height="20%">
+    <form action="Usuarios/subirFoto" enctype="multipart/form-data" method="post">
+        <input type="file" name="perfil" class="center-block">
+        <input type="submit" value="Subir" class="btn btn-primary center-block">
+    </form>
+</div>

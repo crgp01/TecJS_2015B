@@ -1,0 +1,23 @@
+<div class="jumbotron centrar-jumbotron">
+    <h1 class="centro ">Bienvenidos</h1>
+
+    <h2 class="centro">Lista de Usuarios</h2>
+    <img class="logoTamano center-block" alt="Apple" src="fondo1.jpg" width="20%" height="15%">
+
+    <ul>
+        <% for(var i=0; i<usuarios.length; i++) {%>
+            <li>
+                <%= usuarios[i].nombre %>
+            </li>
+
+            <% for(var j=0; j<usuarios[i].pokemons.length; j++) {%>
+                <li><pre>
+                    <%= usuarios[i].pokemons[j].nombre %><br><img src="images/<%=usuarios[i].pokemons[j].url %>" width:"70px" height="70px" >
+                    
+                    
+               </pre></li>
+                <% } %>
+                    <% } %>
+    </ul>
+
+</div>
