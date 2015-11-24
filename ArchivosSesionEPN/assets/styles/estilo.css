@@ -17,3 +17,17 @@
 .margen-form {
     margin: 15%;
 }
+
+.ancho-pre {
+    max-width: 50%;
+    max-height: 200px;
+}
+
+.usuarios {
+    font-size: 2.5em;
+    margin-left: 30%;
+}
+
+.pokemon {
+    font-size: 1.5em;
+}

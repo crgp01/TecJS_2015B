@@ -31,36 +31,11 @@ module.exports.bootstrap = function (cb) {
                     }
                     sails.log.info('Usuario:' + JSON.stringify(userCreated));
 
-
-
-                    Pokemons.create({
-                        nombre: "Pikachu",
-                        duenio: userCreated.id
-                    })
-
-                    .exec(function (err, created) {
-                        if (err) {
-                            sails.log.info("Error: ", err);
-                        }
-                        sails.log.info('Pokemon:' + JSON.stringify(created));
-
-                    });
-
-                    Pokemons.create({
-                            nombre: "Charmander",
-                            duenio: userCreated.id
-                        })
-                        .exec(function (err, created) {
-                            if (err) {
-                                sails.log.info("Error: ", err);
-                            }
-                            sails.log.info('Pokemon:' + JSON.stringify(created));
-                        });
                 });
 
             var usuariocrgp = {
-                nombre: "crgp",
-                usuario: "crgp",
+                nombre: "maria",
+                usuario: "maria",
                 password: "123456"
             };
 
@@ -73,31 +48,6 @@ module.exports.bootstrap = function (cb) {
                     }
                     sails.log.info('Usuario:' + JSON.stringify(userCreated));
 
-
-
-                    Pokemons.create({
-                        nombre: "Bulbasaur",
-                        duenio: userCreated.id
-                    })
-
-                    .exec(function (err, created) {
-                        if (err) {
-                            sails.log.info("Error: ", err);
-                        }
-                        sails.log.info('Pokemon:' + JSON.stringify(created));
-
-                    });
-
-                    Pokemons.create({
-                            nombre: "Caterpie",
-                            duenio: userCreated.id
-                        })
-                        .exec(function (err, created) {
-                            if (err) {
-                                sails.log.info("Error: ", err);
-                            }
-                            sails.log.info('Pokemon:' + JSON.stringify(created));
-                        });
                 });
 
         }

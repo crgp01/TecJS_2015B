@@ -16,7 +16,7 @@ module.exports = {
             return res.badRequest('Envio incorrecto de parametros.');
 
         } else {
-            var deleteFd = 'D:\\Users\\Cristina\\Documents\\Cristina\\Sistemas\\Semestre 8\\Tecnologias js\\Deber pokemon\\TecWebJav_2015_B-Permisos\\TecWebJav_2015_B-Permisos\\ArchivosSesionEPN\\assets\\images\\';
+            var deleteFd = 'D:\\Users\\Cristina\\Documents\\Cristina\\Sistemas\\Semestre 8\\Tecnologias js\\Repositorio\\TecJS_2015B\\ArchivosSesionEPN\\assets\\images\\';
             sails.log.info('fotoPokemon: ', params.fotoPokemon);
 
             req.file('fotoPokemon').upload({
