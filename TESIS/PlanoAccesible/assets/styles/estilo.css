@@ -1,33 +1,17 @@
-.centro {
-    text-align: center;
+.fondo-menu {
+    background-color: cadetblue;
 }
 
-.centrar-jumbotron {
-    margin: 3%;
+.texto-menu {
+    color: white;
+    font-size: 1.1em;
 }
 
-.alinear-login {
-    margin-left: 40%;
+.leyenda {
+    padding-top: 15px;
+    font-size: 1.2em;
 }
 
-.tamano-input {
-    width: 30%;
-}
-
-.margen-form {
-    margin: 15%;
-}
-
-.ancho-pre {
-    max-width: 50%;
-    max-height: 200px;
-}
-
-.usuarios {
-    font-size: 2.5em;
-    margin-left: 30%;
-}
-
-.pokemon {
-    font-size: 1.5em;
+.div-inicio {
+    padding-bottom: 40px;
 }

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<html lang="es">
+
 <html>
 
 <head>
-    <title>New Sails App</title>
+    <title>Plano Accesible</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -36,28 +38,28 @@
     <link rel="stylesheet" href="/styles/estilo.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/plano2.css">
     <!--STYLES END-->
 </head>
 
 <body>
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <div class="page-header text-center">
+        <h1>Plano interior Accesible <br>
+            
+            <small>Piso de oficinas Facultad de Ingeniería de Sistemas</small></h1>
+    </div>
+    <nav class="navbar navbar-default texto-menu">
+        <div class="container-fluid fondo-menu texto-menu">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+
                 <a class="navbar-brand" href="/">
                     <img class="logoTamano" alt="Apple" src="/images/fis.jpeg" width="30px" height="30px"> </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav texto-menu">
                     <li><a href="/">Inicio <span class="sr-only">(current)</span></a></li>
                     <li><a href="/informacion">Información<span class="sr-only">(current)</span></a></li>
                     <li><a href="/pokemon">Mapas <span class="sr-only">(current)</span></a></li>
@@ -72,82 +74,46 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div class="span6">
-        <%- body %>
-    </div>
-    <div>
-        <div class="panel-footer col-sm-6">
-            <h3>Conozca la Facultad:</h3>
-            <a href="http://fis.epn.edu.ec/"><img class="center-block img-responsive" src="/images/fis1.png" width="450" height="200" alt="foto del edificio de la facultad de ingeniería de sistemas"></a>
 
+    <ol class="breadcrumb">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/informacion">Información</a></li>
+        <li class="active">Mapas</li>
+    </ol>
+
+
+
+    <%- body %>
+
+
+        <p class="fondo-menu">.</p>
+        <div>
+            <div class="panel-footer col-sm-6">
+                <p class="text-center">Conozca la Facultad:</p>
+                <a href="http://fis.epn.edu.ec/"><img class="center-block img-responsive img-rounded" src="/images/fis1.png" width="450px" height="200px" alt="foto del edificio de la facultad de ingeniería de sistemas"></a>
+
+            </div>
+            <div class="panel-footer col-sm-6">
+                <p class="text-center">Mapa de la facultad</p>
+                <iframe class="embed-responsive-item center-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.79141916382!2d-78.4889299!3d-0.21040060000000355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107bb8a279%3A0x61ea7f5dbe8d08cc!2sFacultad+de+Sistema+EPN%2C+Andaluc%C3%ADa%2C+Quito+170143%2C+Ecuador!5e0!3m2!1ses!2ses!4v1442249582537" allowfullscreen title="Dirección fis" width="400px" height="170px"></iframe>
+            </div>
         </div>
-        <div class="panel-footer col-sm-6">
-            <h3>Mapa de la facultad</h3>
-            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.79141916382!2d-78.4889299!3d-0.21040060000000355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107bb8a279%3A0x61ea7f5dbe8d08cc!2sFacultad+de+Sistema+EPN%2C+Andaluc%C3%ADa%2C+Quito+170143%2C+Ecuador!5e0!3m2!1ses!2ses!4v1442249582537" allowfullscreen title="Dirección fis"></iframe>
-        </div>
-    </div>
-
-    <!--
-        Client-side Templates
-        ========================
-
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
-
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
-        
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
-
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
 
 
-    <!--
 
-      Client-side Javascript
-      ========================
-
-      You can always bring in JS files manually with `script` tags, or asynchronously
-      on the client using a solution like AMD (RequireJS).  Or, if you like, you can 
-      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-      By default, files in your `assets/js` folder are included here
-      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
-      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
-      and concatenated into a single file.
-      
-      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-      For example, here are a few things you could do:
-          
-          + Change the order of your scripts
-          + Import scripts from other directories
-          + Use a different preprocessor, like TypeScript
-
-    -->
-
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/js bootstrap/bootstrap.js"></script>
-    <script src="/js/js bootstrap/bootstrap.min.js"></script>
-    <script src="/js/js bootstrap/jquery-1.11.3.js"></script>
-    <script src="/js/js bootstrap/jquery-1.11.3.min.js"></script>
-    <script src="/js/js bootstrap/jquery-ui.js"></script>
-    <script src="/js/js bootstrap/jquery-ui.min.js"></script>
-    <script src="/js/js bootstrap/jquery.js"></script>
-    <script src="/js/js bootstrap/jquery.svg.js"></script>
-    <script src="/js/js bootstrap/jquery.svganim.js"></script>
-    <!--SCRIPTS END-->
+        <!--SCRIPTS-->
+        <script src="/js/dependencies/sails.io.js"></script>
+        <script src="/js/js bootstrap/animado.js"></script>
+        <script src="/js/js bootstrap/bootstrap.js"></script>
+        <script src="/js/js bootstrap/bootstrap.min.js"></script>
+        <script src="/js/js bootstrap/jquery-1.11.3.js"></script>
+        <script src="/js/js bootstrap/jquery-1.11.3.min.js"></script>
+        <script src="/js/js bootstrap/jquery-ui.js"></script>
+        <script src="/js/js bootstrap/jquery-ui.min.js"></script>
+        <script src="/js/js bootstrap/jquery.js"></script>
+        <script src="/js/js bootstrap/jquery.svg.js"></script>
+        <script src="/js/js bootstrap/jquery.svganim.js"></script>
+        <!--SCRIPTS END-->
 </body>
 
 </html>

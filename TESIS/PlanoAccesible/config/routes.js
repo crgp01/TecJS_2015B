@@ -39,6 +39,12 @@ module.exports.routes = {
 
     '/informacion': {
         view: 'informacion'
+    },
+    '/mapas': {
+        view: 'mapas'
+    },
+    '/plano': {
+        view: 'planoescala'
     }
 
     /***************************************************************************
